@@ -18,6 +18,22 @@
 
   <link rel="stylesheet" type="text/css" href="style-desktop.81ede.css"/>
   <link rel="icon" href="favicon.8de18.ico"/>
+
+  <script 
+    async 
+    src="https://tganalytics.xyz/index.js" 
+    onload="initAnalytics()" 
+    type="text/javascript"
+  ></script>
+  <script>
+      function initAnalytics() {
+          window.telegramAnalytics.init({
+              token: 'eyJhcHBfbmFtZSI6IkRhZ291U29rb2JhbiIsImFwcF91cmwiOiJodHRwczovL3QubWUvQmVzdE9ubGluZUdhbWVCb3QiLCJhcHBfZG9tYWluIjoiaHR0cHM6Ly9saXBhbjQ3Ni5naXRodWIuaW8vU29rb2JhbkdhbWUvIn0=!rTMu+CulbxbCCsqYSoyqtivjzv4BX5bLay3NbYHVMug=', // 这里填入 "Your token for recording"
+              appName: 'Sokoban', // 你的游戏名称
+          });
+      }
+  </script>
+
 </head>
 <body>
 <h1 class="header">sokoban</h1>
