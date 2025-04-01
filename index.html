@@ -68,6 +68,20 @@
   </script>
   
   
+
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <script>
+    if (window.Telegram?.WebApp) {
+      const tg = Telegram.WebApp;
+      tg.expand(); // 强制全屏显示
+      tg.enableClosingConfirmation(); // 防止误关闭
+      //console.log("User:", tg.initDataUnsafe.user?.id); // 获取用户信息
+    } else {
+      alert("Please open this game inside Telegram!");
+    }
+  </script>
+
+
 </head>
 <body>
   <canvas id="GameCanvas" oncontextmenu="event.preventDefault()" tabindex="0"></canvas>
