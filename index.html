@@ -76,6 +76,16 @@
       tg.expand(); // 强制全屏显示
       tg.enableClosingConfirmation(); // 防止误关闭
       //console.log("User:", tg.initDataUnsafe.user?.id); // 获取用户信息
+
+      // 添加返回按钮
+      const backBtn = document.createElement('button');
+      backBtn.textContent = '← Back to Bot';
+      backBtn.style.position = 'fixed';
+      backBtn.style.top = '10px';
+      backBtn.style.left = '10px';
+      backBtn.style.zIndex = 9999;
+      backBtn.onclick = () => tg.close();
+      document.body.appendChild(backBtn);
     } else {
       alert("Please open this game inside Telegram!");
     }
